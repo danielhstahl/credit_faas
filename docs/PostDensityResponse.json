@@ -1,0 +1,19 @@
+{
+    "type":"array",
+    "items":{
+        "type":"object",
+        "properties":{
+            "density":{
+                "type":"number"
+            },
+            "at_point":{
+                "type":"number"
+            }
+        },
+        "required":[
+            "density",
+            "at_point"
+        ],
+        "additionalProperties":false
+    }
+}

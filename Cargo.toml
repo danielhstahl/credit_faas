@@ -1,0 +1,25 @@
+[package]
+name = "credit_faas"
+version = "0.1.0"
+authors = ["Daniel Stahl <danstahl1138@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+fang_oost = "0.13.7"
+num-complex = "0.2"
+rayon = "1.0.1"
+cf_functions = "0.10.0"
+cf_dist_utils = "0.8"
+serde_json = "1.0"
+serde = "1.0"
+serde_derive = "1.0"
+loan_ec = "0.1.4"
+lambda_http = { git = "https://github.com/awslabs/aws-lambda-rust-runtime" }
+lambda_runtime = { git = "https://github.com/awslabs/aws-lambda-rust-runtime" }
+
+[dev-dependencies]
+approx = "0.2.0"
+
+
+[badges]
+travis-ci = { repository = "phillyfan1138/credit_faas" }

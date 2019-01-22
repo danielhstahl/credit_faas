@@ -1,0 +1,36 @@
+openapi: 3.0.0
+info:
+  title: Credit Risk Demo
+  description: Demonstration for finding the density of a credit portfolio
+  version: '1'
+
+servers:
+  - url: ##CHANGE
+    description: Production server
+
+paths:
+  /v1/credit/density:
+    post:
+      summary: Computes the loss density of a loan portfolio
+      description: Computes the loss density of a loan portfolio
+      responses: 
+        '200':
+          description: Density at points
+          content:
+            application/json: 
+              schema:
+                $ref: './PostDensityResponse.json'
+              example:
+                $ref: './PostDensityExampleResponse.json'
+        '400':
+          description: Error for incorrect request
+          content:
+            application/json: 
+              schema:
+                $ref: './ErrorResponse.json'        
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: './PostDensityOptions.json'

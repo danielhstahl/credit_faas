@@ -1,0 +1,38 @@
+{
+    "additionalProperties": false,
+    "properties":{
+        "lambda":{
+            "type": "number",
+            "example": 0.05
+        },
+        "q":{
+            "type": "number",
+            "example": 0.05
+        },
+        "numU":{
+            "type": "integer",
+            "example": 128
+        },
+        "pd":{
+            "type": "number",
+            "example": 0.02
+        },
+        "numLoans":{
+            "type": "integer",
+            "example": 100000
+        },
+        "volatility":{
+            "type": "number",
+            "example": 0.5
+        }
+    },
+    "required": [
+        "lambda",
+        "q",
+        "numU",
+        "pd",
+        "numLoans",
+        "volatility"
+    ],
+    "type": "object"
+}
