@@ -21,6 +21,8 @@
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
+    "queryStringParameters":null,
+    "pathParameters":{},
     "stageVariables": {"stageVarName": "stageVarValue"},
     "requestContext": {
         "resourceId": "123456",

@@ -1,6 +1,6 @@
 {
     "body":"{\"lambda\":0.05,\"numU\":128,\"pd\":0.02,\"numLoans\":100000,\"volatility\":0.5}",
-    "path":"/realoptions/v1/credit/density",
+    "path":"/v1/credit/density",
     "httpMethod":"POST",
     "headers": {
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
@@ -21,6 +21,8 @@
         "X-Forwarded-Port": "443",
         "X-Forwarded-Proto": "https"
     },
+    "queryStringParameters":null,
+    "pathParameters":{},
     "stageVariables": {"stageVarName": "stageVarValue"},
     "requestContext": {
         "resourceId": "123456",

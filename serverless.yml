@@ -1,0 +1,19 @@
+service: credit-faas
+provider:
+  name: aws
+  runtime: provided
+  stage: prd
+
+package:
+  individually: true #needed to name each binary "bootstrap"
+functions:
+  calculator:
+    handler: doesntmatter #because runtime is provided
+    package:
+      artifact: credit_faas.zip
+    events:
+      - http:
+          path: v1/credit/density
+          method: post
+          cors: true
+  
