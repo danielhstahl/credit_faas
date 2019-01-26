@@ -86,9 +86,9 @@ fn get_density(parameters: Parameters) -> Vec<Element> {
         pd,
         volatility,
     } = parameters;
-    let x_min = -num_loans * (pd * (1.0 + volatility * 4.0));
+    let x_min = -num_loans * (pd * (1.0 + volatility * 3.0) * 3.0);
     let q_adjusted = -q / x_min;
-    let lambda_adjusted = lambda * x_min;
+    let lambda_adjusted = -lambda * x_min;
     let liquid_fn = loan_ec::get_liquidity_risk_fn(lambda_adjusted, q_adjusted);
     let log_lpm_cf = loan_ec::get_log_lpm_cf(&lgd_fn, &liquid_fn);
     let mut discrete_cf = loan_ec::EconomicCapitalAttributes::new(num_u, 1);
