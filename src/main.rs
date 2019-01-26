@@ -86,11 +86,10 @@ fn get_density(parameters: Parameters) -> Vec<Element> {
         pd,
         volatility,
     } = parameters;
-    let est_el = loan_ec::expectation_liquidity(lambda, q, pd * num_loans);
-    let est_var =
-        loan_ec::variance_liquidity(lambda, q, pd * num_loans, pd * num_loans * num_loans);
-    let x_min = -est_el - est_var.sqrt() * 10.0;
-    let liquid_fn = loan_ec::get_liquidity_risk_fn(lambda, q);
+    let x_min = -num_loans * (pd * (1.0 + volatility * 4.0));
+    let q_adjusted = -q / x_min;
+    let lambda_adjusted = lambda * x_min;
+    let liquid_fn = loan_ec::get_liquidity_risk_fn(lambda_adjusted, q_adjusted);
     let log_lpm_cf = loan_ec::get_log_lpm_cf(&lgd_fn, &liquid_fn);
     let mut discrete_cf = loan_ec::EconomicCapitalAttributes::new(num_u, 1);
     let u_domain: Vec<Complex<f64>> = fang_oost::get_u_domain(num_u, x_min, 0.0).collect();

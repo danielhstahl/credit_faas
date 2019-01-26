@@ -1,29 +1,35 @@
 {
     "additionalProperties": false,
     "properties":{
-        "lambda":{
-            "type": "number",
-            "example": 0.05
-        },
-        "q":{
-            "type": "number",
-            "example": 0.05
-        },
-        "numU":{
-            "type": "integer",
-            "example": 128
-        },
         "pd":{
             "type": "number",
-            "example": 0.02
+            "example": 0.02,
+            "description": "Probability of default"
         },
         "numLoans":{
             "type": "integer",
-            "example": 100000
+            "example": 100000,
+            "description": "Number of loans"
         },
         "volatility":{
             "type": "number",
-            "example": 0.5
+            "example": 0.5,
+            "description": "Volatility"
+        },
+        "lambda":{
+            "type": "number",
+            "example": 0.5,
+            "description": "Lambda"
+        },
+        "q":{
+            "type": "number",
+            "example": 0.05,
+            "description": "q"
+        },
+        "numU":{
+            "type": "integer",
+            "example": 128,
+            "description": "Steps in U"
         }
     },
     "required": [
