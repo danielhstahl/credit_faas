@@ -14,11 +14,8 @@ serde_json = "1.0"
 serde = "1.0"
 serde_derive = "1.0"
 loan_ec = "0.1.4"
-lambda_http = { git = "https://github.com/awslabs/aws-lambda-rust-runtime" }
-lambda_runtime = { git = "https://github.com/awslabs/aws-lambda-rust-runtime" }
-
-[dev-dependencies]
-approx = "0.2.0"
+lambda_http = "0.1.0"
+lambda_runtime = "0.2.0"
 
 
 [badges]
